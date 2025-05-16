@@ -26,8 +26,8 @@
       font-family: 'Poppins', sans-serif;
       background: var(--background);
       color: var(--text-color);
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      overflow-y: auto;
     }
     /* Sidebar */
     .sidebar {
@@ -37,6 +37,8 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 1rem;
+      overflow-y: auto;
+      max-height: 100vh;
     }
     .sidebar h1 {
       font-size: 1.5rem;
