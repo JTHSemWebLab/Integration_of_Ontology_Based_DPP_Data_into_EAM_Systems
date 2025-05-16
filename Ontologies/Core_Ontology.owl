@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology/"
+     xml:base="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology/"
+     xmlns:mc="http://www.semanticweb.org/senp94001/MaterialandComponent"
+     xmlns:dpp="http://www.semanticweb.org/senp94001/DPPandDPPInformation"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://www.semanticweb.org/senp94001/SupplyChain"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Core="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#"
+     xmlns:cert="http://www.semanticweb.org/senp94001/Certification"
+     xmlns:lcei="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact"
+     xmlns:manu="http://www.semanticweb.org/senp94001/Manufacturer"
+     xmlns:prod="http://www.semanticweb.org/senp94001/Product"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:maint="http://www.semanticweb.org/senp94001/Maintenance">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#describes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#describes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasCertification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasCertification">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Certification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasEnvironmentalimpact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasEnvironmentalimpact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasLifeCycle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasLifeCycle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasMaintenance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasMaintenance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Maintenance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasManufacturer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasManufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasMaterial">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/MaterialandComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasSupplychainInformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasSupplychainInformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Certification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Certification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#describes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Maintenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Maintenance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/MaterialandComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/MaterialandComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasCertification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Certification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasLifeCycle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Maintenance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasManufacturer"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/MaterialandComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#hasSupplychainInformation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#ENEC_Certification_443053 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#ENEC_Certification_443053">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Certification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Filament -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Filament">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/MaterialandComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Glamox_AS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Glamox_AS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#LampHolder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#LampHolder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/MaterialandComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Polycarbonate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Polycarbonate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/MaterialandComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Steel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Steel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/MaterialandComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#i60_1500_LED_6000_HF_840_TW_OP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#i60_1500_LED_6000_HF_840_TW_OP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product"/>
+        <Core:hasCertification rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#ENEC_Certification_443053"/>
+        <Core:hasComponent rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Filament"/>
+        <Core:hasComponent rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#LampHolder"/>
+        <Core:hasManufacturer rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Glamox_AS"/>
+        <Core:hasMaterial rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Polycarbonate"/>
+        <Core:hasMaterial rdf:resource="http://www.semanticweb.org/senp94001/ontologies/2025/4/Core_Ontology#Steel"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

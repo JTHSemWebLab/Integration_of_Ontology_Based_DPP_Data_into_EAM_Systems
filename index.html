@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ontology-Based Approach to Integrating Digital Product Passport Data into Enterprise Asset Management Systems</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #34568B;
+      --secondary: #FF6F61;
+      --background: #F7F7F7;
+      --text-color: #333;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      font-family: 'Poppins', sans-serif;
+      background: var(--background);
+      color: var(--text-color);
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Sidebar */
+    .sidebar {
+      background: #570e66;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .sidebar h1 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .nav-links {
+      list-style: none;
+    }
+    .nav-links li {
+      margin-bottom: 1rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .nav-links a:hover {
+      background: var(--secondary);
+    }
+    /* Main content */
+    .main {
+      padding: 1.5rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .main-header h2 {
+      font-weight: 300;
+    }
+    .content-frame {
+      flex-grow: 1;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+    /* Contact Card */
+    .contact-card {
+      background: #fff;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+      max-width: 100%;
+      font-size: 0.85rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      color: var(--text-color);
+    }
+    .contact-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .contact-card p {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    .contact-card a {
+      color: var(--secondary);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    /* Footer */
+    .footer {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.85rem;
+      background: #fff;
+      border-top: 1px solid #e0e0e0;
+      color: var(--text-color);
+      flex-wrap: wrap;
+    }
+
+    .footer a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div>
+      <h1>DPP-EAM Ontology Modules</h1>
+      <ul class="nav-links">
+        <li><a href="overview.html" target="frame"><i class="fas fa-chart-pie"></i> Overview</a></li>
+        <li><a href="core-ontology.html" target="frame"><i class="fas fa-project-diagram"></i> Core Ontology Module</a></li>
+        <li><a href="certification-module.html" target="frame"><i class="fas fa-project-diagram"></i> Certification Module</a></li>
+        <li><a href="dpp-module.html" target="frame"><i class="fas fa-project-diagram"></i> DPP Module</a></li>
+        <li><a href="lifecycle-environmentalimpact-module.html" target="frame"><i class="fas fa-project-diagram"></i> Lifecycle and Environmental Impact Module</a></li>
+        <li><a href="maintenance-module.html" target="frame"><i class="fas fa-project-diagram"></i> Maintenance Module</a></li>
+        <li><a href="manufacturer-module.html" target="frame"><i class="fas fa-project-diagram"></i> Manufacturer Module</a></li>
+        <li><a href="material-and-component-module.html" target="frame"><i class="fas fa-project-diagram"></i> Material and Component Module</a></li>
+        <li><a href="product-module.html" target="frame"><i class="fas fa-project-diagram"></i> Product Module</a></li>
+        <li><a href="supplychain-module.html" target="frame"><i class="fas fa-project-diagram"></i> Supplychain Module</a></li>
+        <li><a href="./documentations/documentation.pdf" target="frame"><i class="fas fa-file-pdf"></i> Documentation</a></li>
+        <li><a href="./schema/SchemaDiagram.png" target="frame"><i class="fas fa-cogs"></i> Schema Diagram</a></li>
+        <li><a href="./architecture/architecture.png" target="frame"><i class="fas fa-balance-scale"></i> Architecture</a></li>        
+        <li><a href="./paper/abstract.pdf" target="frame"><i class="fas fa-file-pdf"></i> Full Paper</a></li>        
+        <li><a href="https://github.com/JTHSemWebLab/Integration_of_Ontology_Based_DPP_Data_into_EAM_Systems" target="_blank"><i class="fab fa-github"></i> Repository</a></li>
+      </ul>
+    </div>
+    <!-- Contact in sidebar bottom -->
+    <div class="contact-card">
+        <h3>Contacts</h3>
+        <p><strong>Emil Fernando</strong><br>
+            <a href="mailto:feem23cx@student.ju.se">feem23cx@student.ju.se</a><br>
+            SusBIM Master's student
+        </p>
+        <p><strong>Nivedhitha Pandi Kadavil</strong><br>
+            <a href="mailto:pani23up@student.ju.se">pani23up@student.ju.se</a><br>
+            SusBIM Master's student
+        </p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="main-header">
+      <h2>Ontology-Based Approach to Integrating Digital Product Passport Data into Enterprise Asset Management Systems</h2>
+    </header>
+    <iframe name="frame" src="overview.html" class="content-frame"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div style="max-width: 60%;">
+      <strong>ProFlow</strong> and <strong>PASS4Sustainability</strong> Research Projects<br>
+      School of Engineering, Department of Construction Engineering and Lighting Science<br>
+      Sustainable Building Information Managmement (SusBIM) Masters program<br>
+      Jönköping University
+    </div>
+  <div>
+    <a href="https://github.com/JTHSemWebLab/Integration_of_Ontology_Based_DPP_Data_into_EAM_Systems" target="_blank">GitHub: JTHSemWebLab</a>
+  </div>
+  </footer>
+</body>
+</html>

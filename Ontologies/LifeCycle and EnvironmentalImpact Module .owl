@@ -1,0 +1,734 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact/"
+     xml:base="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:lcei="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#"
+     xmlns:prov="https://www.w3.org/ns/prov#"
+     xmlns:qudt="https://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#PerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#PerformedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#PerformsAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#PerformsAgentRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ProvidesAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ProvidesAgentRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#atPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#atPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent"/>
+        <rdfs:range rdf:resource="https://schema.org/Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasEnvironmentalImpact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasEnvironmentalImpact">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EnvironmentalImpact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasLifeCycle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasLifeCycle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#LifeCycle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/resource/Quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantityKind">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantityValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantityValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasRawMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasRawMaterial">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasSpatiotemporalExtent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasSpatiotemporalExtent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#atTime -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#atTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#used -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#used">
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasAttributedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasGeneratedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://qudt.org/schema/qudt/numericValue -->
+
+    <owl:DatatypeProperty rdf:about="https://qudt.org/schema/qudt/numericValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#atTime -->
+
+    <owl:DatatypeProperty rdf:about="https://www.w3.org/ns/prov#atTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Quantity -->
+
+    <owl:Class rdf:about="http://dbpedia.org/resource/Quantity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantityKind"/>
+                <owl:someValuesFrom rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantityValue"/>
+                <owl:someValuesFrom rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#AssemblingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#AssemblingAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#AssemblingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#AssemblingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Design -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Design">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DesigningAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DesigningAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DesigningRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DesigningRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DissemblingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DissemblingAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DissemblingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DissemblingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EndOfLife -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EndOfLife">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EnvironmentalImpact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EnvironmentalImpact">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantity"/>
+                <owl:someValuesFrom rdf:resource="http://dbpedia.org/resource/Quantity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ProvidesAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasSpatiotemporalExtent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#InstallingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#InstallingAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#InstallingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#InstallingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#LifeCycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#LifeCycle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasEnvironmentalImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EnvironmentalImpact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Maintenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Maintenance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Manufacturing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Manufacturing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ManufacturingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ManufacturingAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ManufacturingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ManufacturingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#MiningAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#MiningAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#MiningRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#MiningRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RawMaterialExtraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RawMaterialExtraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RecyclingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RecyclingAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RecyclingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RecyclingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#atPlace"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3.org/ns/prov#atTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TechnicianAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TechnicianAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TechnicianRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TechnicianRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent"/>
+        <owl:disjointWith rdf:resource="https://schema.org/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TransportingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TransportingAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TransportingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TransportingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Usage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Usage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/QuantityKind -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/QuantityKind"/>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/QuantityValue -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/QuantityValue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasUnit"/>
+                <owl:someValuesFrom rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/Unit -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/Unit"/>
+    
+
+
+    <!-- https://schema.org/Place -->
+
+    <owl:Class rdf:about="https://schema.org/Place">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasEnvironmentalImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EnvironmentalImpact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasLifeCycle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#LifeCycle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Activity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#PerformedBy"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#PerformsAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Entity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3.org/ns/prov#wasAttributedTo"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Role -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Role"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#CO2_emissions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#CO2_emissions">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+        <lcei:hasEnvironmentalImpact rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#CO2_emissions"/>
+        <lcei:hasEvent rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#UsageEvent_001"/>
+        <lcei:hasUnit rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#KgCO2eq"/>
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">120.0</qudt:numericValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Energy_Consumption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Energy_Consumption">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+        <lcei:hasEnvironmentalImpact rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Energy_Consumption"/>
+        <lcei:hasEvent rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#UsageEvent_001"/>
+        <lcei:hasUnit rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#kWh"/>
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.5</qudt:numericValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#KgCO2eq -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#KgCO2eq">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Norway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Norway">
+        <rdf:type rdf:resource="https://schema.org/Place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#UsageEvent_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#UsageEvent_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event"/>
+        <lcei:atPlace rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Norway"/>
+        <lcei:hasLifeCycle rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#UsageEvent_001"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-00T12:00:00</prov:atTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#i60_1500_LED_6000_HF_840_TW_OP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#i60_1500_LED_6000_HF_840_TW_OP">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <lcei:hasEvent rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#UsageEvent_001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#kWh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#kWh">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#2025-05-00T12:00:00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#2025-05-00T12:00:00">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Design"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EndOfLife"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Maintenance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Manufacturing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RawMaterialExtraction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Usage"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

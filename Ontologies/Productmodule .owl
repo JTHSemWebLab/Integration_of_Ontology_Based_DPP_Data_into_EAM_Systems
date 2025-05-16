@@ -1,0 +1,1196 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/senp94001/Product/"
+     xml:base="http://www.semanticweb.org/senp94001/Product/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prod="http://www.semanticweb.org/senp94001/Product#"
+     xmlns:prov="https://www.w3.org/ns/prov#"
+     xmlns:qudt="https://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:scheme="https://schema.org/"
+     xmlns:dbpedia="http://dbpedia.org/resource/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/senp94001/Product"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#PerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#PerformedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#PerformsAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#PerformsAgentRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#ProvidesAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#ProvidesAgentRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#describes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#describes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product#DPP"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasCertification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasCertification">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://schema.org/Certification#Certification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasContext">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product#PropertyTobeReified"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasDataCarrier -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasDataCarrier">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#DataCarrier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasEnvironmentalImpact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasEnvironmentalImpact">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#EnvironmentalImpact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasFirstStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasFirstStep">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product#SequentialInstructionDetails"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#FirstItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://schema.org/identifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasIdentifierType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasIdentifierType">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#IDType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasInstructionDetail -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasInstructionDetail">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#InstructionDetails"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasInstructionEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasInstructionEntity">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#InstructionEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasLifeCycle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasLifeCycle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#LifeCycle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasMaintenance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasMaintenance">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#Maintenance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasManufacturer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasManufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://schema.org/manufacturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasMaterial">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://schema.org/material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://schema.org/name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasNext">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product#ListItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#ListItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/resource/Quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasQuantityKind">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasQuantityValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasQuantityValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasSpecification">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasSubstance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#Substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasSupplychainInfo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasSupplychainInfo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#SupplyChainInformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasTemporalExtent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasTemporalExtent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#TemporalExtent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Product#Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Product#hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#used -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#used">
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasAttributedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasGeneratedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#identifierAsText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/Product#identifierAsText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#nameAsString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/Product#nameAsString">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/numericValue -->
+
+    <owl:DatatypeProperty rdf:about="https://qudt.org/schema/qudt/numericValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Quantity -->
+
+    <owl:Class rdf:about="http://dbpedia.org/resource/Quantity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasQuantityKind"/>
+                <owl:someValuesFrom rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasQuantityValue"/>
+                <owl:someValuesFrom rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#AssemblingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#AssemblingAgent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#AssemblingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#AssemblingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#AssemblyInstruction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#AssemblyInstruction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#InstructionEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#Component">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Context -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#Context"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#DPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#DPP">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#describes"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#DataCarrier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#DataCarrier">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasDataCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#DataCarrier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#DisasseblyInstruction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#DisasseblyInstruction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#InstructionEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#DissemblingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#DissemblingAgent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#DissemblingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#DissemblingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#EnvironmentalImpact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#EnvironmentalImpact">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasEnvironmentalImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#EnvironmentalImpact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#FirstItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#FirstItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#ListItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#GlobalTradeID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#GlobalTradeID">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#IDType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#IDType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#IDType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasIdentifierType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#IDType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#InstallationInstruction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#InstallationInstruction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#InstructionEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#InstallationRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#InstallationRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#InstallingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#InstallingAgent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#InstructionContext -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#InstructionContext">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#Context"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#InstructionDetails -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#InstructionDetails">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#Range"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#InstructionEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#InstructionEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#PropertyTobeReified"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#LastItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#LastItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#ListItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#LifeCycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#LifeCycle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasLifeCycle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#LifeCycle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#ListItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#ListItem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Maintenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#Maintenance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasMaintenance"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#Maintenance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#ManufacturingAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#ManufacturingAgent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#ManufacturingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#ManufacturingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#ProductSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#ProductSpecification">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasSpecification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#PropertyTobeReified -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#PropertyTobeReified"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Range -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#Range"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#SequenceList -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#SequenceList"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#SequentialInstructionDetails -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#SequentialInstructionDetails">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Product#InstructionDetails"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Substance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#Substance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasSubstance"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#Substance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#SupplyChainInfo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#SupplyChainInfo">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#SupplyChainInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#SupplyChainInformation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasSupplychainInfo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#SupplyChainInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#TemporalExtent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#TemporalExtent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Product#Type">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#Type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#PerformsAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/QuantityKind -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/QuantityKind">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasQuantityKind"/>
+                <owl:someValuesFrom rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/QuantityValue -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/QuantityValue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://qudt.org/schema/qudt/Unit -->
+
+    <owl:Class rdf:about="https://qudt.org/schema/qudt/Unit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasUnit"/>
+                <owl:someValuesFrom rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#ProvidesAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasDataCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#DataCarrier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasInstructionEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#InstructionEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasName"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasSpecification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasSubstance"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#Substance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#identifierAsText"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#nameAsString"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/identifier -->
+
+    <owl:Class rdf:about="https://schema.org/identifier">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#identifierAsText"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/manufacturer -->
+
+    <owl:Class rdf:about="https://schema.org/manufacturer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasManufacturer"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/material -->
+
+    <owl:Class rdf:about="https://schema.org/material">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <owl:Class rdf:about="https://schema.org/name">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasName"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#nameAsString"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Certification#Certification -->
+
+    <owl:Class rdf:about="https://schema.org/Certification#Certification">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasCertification"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/Certification#Certification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Activity"/>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Role -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Role">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Product#hasTemporalExtent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Product#TemporalExtent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#DismantleManual_i60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#DismantleManual_i60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#Context"/>
+        <prod:hasInstructionDetail rdf:resource="http://www.semanticweb.org/senp94001/Product#DismantleManual_i60"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#ENEC_Certification_443053 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#ENEC_Certification_443053">
+        <rdf:type rdf:resource="https://schema.org/Certification#Certification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#GTIN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#GTIN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#IDType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#GTIN_7054130910787 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#GTIN_7054130910787">
+        <rdf:type rdf:resource="https://schema.org/identifier"/>
+        <prod:hasIdentifierType rdf:resource="http://www.semanticweb.org/senp94001/Product#GTIN"/>
+        <prod:identifierAsText>GTIN_7054130910787</prod:identifierAsText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Glamox_AS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Glamox_AS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#ManufacturingAgent"/>
+        <rdf:type rdf:resource="https://schema.org/manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Height -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Height">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+        <prod:hasUnit rdf:resource="http://www.semanticweb.org/senp94001/Product#mm"/>
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">57.0</qudt:numericValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#InstallManual_i60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#InstallManual_i60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#Context"/>
+        <prod:hasInstructionDetail rdf:resource="http://www.semanticweb.org/senp94001/Product#InstallManual_i60"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#LED_Luminaire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#LED_Luminaire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Length -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Length">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+        <prod:hasUnit rdf:resource="http://www.semanticweb.org/senp94001/Product#mm"/>
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1502.0</qudt:numericValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Material_Polycarbonate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Material_Polycarbonate">
+        <rdf:type rdf:resource="https://schema.org/material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Material_Steel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Material_Steel">
+        <rdf:type rdf:resource="https://schema.org/material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Model_I60091078 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Model_I60091078">
+        <rdf:type rdf:resource="https://schema.org/identifier"/>
+        <prod:identifierAsText>Model_I60091078</prod:identifierAsText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Name_LightFixture_i60-1500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Name_LightFixture_i60-1500">
+        <rdf:type rdf:resource="https://schema.org/name"/>
+        <prod:nameAsString>Name_LightFixture_i60-1500</prod:nameAsString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Spec_ColourTemp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Spec_ColourTemp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+        <prod:hasSpecification rdf:resource="http://www.semanticweb.org/senp94001/Product#Spec_ColourTemp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Spec_IPClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Spec_IPClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+        <prod:hasSpecification rdf:resource="http://www.semanticweb.org/senp94001/Product#Spec_IPClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Spec_LifeTime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Spec_LifeTime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+        <prod:hasSpecification rdf:resource="http://www.semanticweb.org/senp94001/Product#Spec_LifeTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Spec_LumenOutput -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Spec_LumenOutput">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+        <prod:hasSpecification rdf:resource="http://www.semanticweb.org/senp94001/Product#Spec_LumenOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#Width -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#Width">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/QuantityKind"/>
+        <prod:hasUnit rdf:resource="http://www.semanticweb.org/senp94001/Product#mm"/>
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">165.0</qudt:numericValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#i60-1500_LED_6000_HF_840_TW_OP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#i60-1500_LED_6000_HF_840_TW_OP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Product#ProductSpecification"/>
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <rdf:type rdf:resource="https://schema.org/identifier"/>
+        <rdf:type rdf:resource="https://schema.org/name"/>
+        <prod:hasName rdf:resource="http://www.semanticweb.org/senp94001/Product#i60-1500_LED_6000_HF_840_TW_OP"/>
+        <prod:hasSpecification rdf:resource="http://www.semanticweb.org/senp94001/Product#Spec_ColourTemp"/>
+        <prod:hasSpecification rdf:resource="http://www.semanticweb.org/senp94001/Product#Spec_IPClass"/>
+        <prod:hasSpecification rdf:resource="http://www.semanticweb.org/senp94001/Product#Spec_LifeTime"/>
+        <prod:hasSpecification rdf:resource="http://www.semanticweb.org/senp94001/Product#Spec_LumenOutput"/>
+        <prod:hasType rdf:resource="http://www.semanticweb.org/senp94001/Product#LED_Luminaire"/>
+        <prod:identifierAsText>GTIN_7054130910787</prod:identifierAsText>
+        <prod:identifierAsText>Model_I60091078</prod:identifierAsText>
+        <prod:nameAsString>Name_LightFixture_i60-1500</prod:nameAsString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Product#mm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Product#mm">
+        <rdf:type rdf:resource="https://qudt.org/schema/qudt/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#AssemblingAgent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#DissemblingAgent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#InstallingAgent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#ManufacturingAgent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#AssemblingRole"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#DissemblingRole"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#InstallationRole"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#ManufacturingRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#AssemblyInstruction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#DisasseblyInstruction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/Product#InstallationInstruction"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

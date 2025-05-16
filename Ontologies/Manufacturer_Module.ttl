@@ -1,0 +1,306 @@
+@prefix : <http://www.semanticweb.org/senp94001/Manufacturer/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <https://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix manuf: <http://www.semanticweb.org/senp94001/Manufacturer#> .
+@prefix scheme: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/senp94001/Manufacturer/> .
+
+<http://www.semanticweb.org/senp94001/Manufacturer> rdf:type owl:Ontology ;
+                                                   owl:versionIRI :v1 ;                                                
+                                                   dcterms:creator "Emil Fernando" ,
+                                                                   "Nivedhitha Pandi Kadavil" ;
+                                                   dcterms:contributor "Rahel Kebede" ,
+                                                                        "Peter Johansson" ,
+                                                                        "Annika Moscati" ;
+                                                   dcterms:created "2025-05-16"^^xsd:date ;
+                                                   dcterms:description "This ontology represents the roles and responsibilities of manufacturing and distribution actors within a Digital Product Passport (DPP), including manufacturers, suppliers, and importers along with their legal and logistical identifiers." ;
+                                                   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                   dcterms:title "Manufacturer Module" ;
+                                                   owl:versionInfo "1.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#PerformedBy
+manuf:PerformedBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain prov:Activity ;
+                  rdfs:range prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#PerformsAgentRole
+manuf:PerformsAgentRole rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain prov:Agent ;
+                        rdfs:range prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#ProvidesAgentRole
+manuf:ProvidesAgentRole rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:range prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifier
+manuf:hasIdentifier rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:range scheme:identifier .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifierType
+manuf:hasIdentifierType rdf:type owl:ObjectProperty ;
+                        rdfs:range manuf:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#hasManufacturer
+manuf:hasManufacturer rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#hasName
+manuf:hasName rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:range scheme:name .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#hasTemporalExtent
+manuf:hasTemporalExtent rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.w3.org/ns/prov#used
+prov:used rdf:type owl:ObjectProperty ;
+          rdfs:domain prov:Activity .
+
+
+###  https://www.w3.org/ns/prov#wasAttributedTo
+prov:wasAttributedTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:range prov:Agent .
+
+
+###  https://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Entity .
+
+
+###  https://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Activity .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#identifierAsText
+manuf:identifierAsText rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain scheme:identifier ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#nameAsString
+manuf:nameAsString rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain scheme:name ;
+                   rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#Distributor
+manuf:Distributor rdf:type owl:Class ;
+                  rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#DistributorRole
+manuf:DistributorRole rdf:type owl:Class ;
+                      rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#EORI
+manuf:EORI rdf:type owl:Class ;
+           rdfs:subClassOf manuf:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#IDType
+manuf:IDType rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty manuf:hasIdentifierType ;
+                               owl:someValuesFrom manuf:IDType
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty manuf:identifierAsText ;
+                               owl:allValuesFrom xsd:string
+                             ] .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#Importer
+manuf:Importer rdf:type owl:Class ;
+               rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#ImportingRole
+manuf:ImportingRole rdf:type owl:Class ;
+                    rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#Producer
+manuf:Producer rdf:type owl:Class ;
+               rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#ProducingRole
+manuf:ProducingRole rdf:type owl:Class ;
+                    rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#Supplier
+manuf:Supplier rdf:type owl:Class ;
+               rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#SupplierRole
+manuf:SupplierRole rdf:type owl:Class ;
+                   rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#UOI
+manuf:UOI rdf:type owl:Class ;
+          rdfs:subClassOf manuf:IDType .
+
+
+###  https://schema.org/Product
+scheme:Product rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty manuf:hasManufacturer ;
+                                 owl:someValuesFrom scheme:manufacturer
+                               ] .
+
+
+###  https://schema.org/identifier
+scheme:identifier rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty manuf:hasIdentifier ;
+                                    owl:someValuesFrom scheme:identifier
+                                  ] .
+
+
+###  https://schema.org/manufacturer
+scheme:manufacturer rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty manuf:hasIdentifier ;
+                                      owl:someValuesFrom scheme:identifier
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty manuf:hasName ;
+                                      owl:someValuesFrom scheme:name
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty manuf:identifierAsText ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty manuf:nameAsString ;
+                                      owl:allValuesFrom xsd:string
+                                    ] .
+
+
+###  https://schema.org/name
+scheme:name rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty manuf:hasName ;
+                              owl:someValuesFrom scheme:name
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty manuf:nameAsString ;
+                              owl:allValuesFrom xsd:string
+                            ] .
+
+
+###  https://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty prov:used ;
+                                owl:someValuesFrom prov:Entity
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty prov:wasGeneratedBy ;
+                                owl:someValuesFrom prov:Activity
+                              ] .
+
+
+###  https://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty manuf:PerformsAgentRole ;
+                             owl:someValuesFrom prov:Role
+                           ] .
+
+
+###  https://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty prov:wasAttributedTo ;
+                              owl:someValuesFrom prov:Agent
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty prov:wasDerivedFrom ;
+                              owl:someValuesFrom prov:Entity
+                            ] .
+
+
+###  https://www.w3.org/ns/prov#Role
+prov:Role rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#EORI
+manuf:EORI rdf:type owl:NamedIndividual ,
+                    manuf:IDType ;
+           manuf:hasIdentifierType manuf:EORI .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#EORI_Glamox
+manuf:EORI_Glamox rdf:type owl:NamedIndividual ,
+                           scheme:identifier ;
+                  manuf:identifierAsText "NO974404532" .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#Glamox_AS
+manuf:Glamox_AS rdf:type owl:NamedIndividual ,
+                         scheme:name ;
+                manuf:nameAsString "Glamox_AS" .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#Glamox_AS_Manufacturer
+manuf:Glamox_AS_Manufacturer rdf:type owl:NamedIndividual ,
+                                      scheme:manufacturer ;
+                             manuf:hasIdentifierType manuf:EORI ;
+                             manuf:identifierAsText "EORI_Glamox" ;
+                             manuf:nameAsString "Glamox_AS" .
+
+
+###  http://www.semanticweb.org/senp94001/Manufacturer#i60-1500_LED_6000_HF_840_TW_OP
+manuf:i60-1500_LED_6000_HF_840_TW_OP rdf:type owl:NamedIndividual ,
+                                              scheme:Product ;
+                                     manuf:hasManufacturer manuf:Glamox_AS .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

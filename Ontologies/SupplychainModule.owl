@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/senp94001/SupplyChain/"
+     xml:base="http://www.semanticweb.org/senp94001/SupplyChain/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://www.semanticweb.org/senp94001/SupplyChain#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:scheme="https://schema.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/senp94001/SupplyChain"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#ProvidesParticipantRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#ProvidesParticipantRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#ParticipantRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#atPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#atPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#hasEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#hasIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://schema.org/identifier#Identifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#hasIdentifierType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#hasIdentifierType">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#IDType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#hasSpatiotemporalExtent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#hasSpatiotemporalExtent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#hasSupplyChainInfo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#hasSupplyChainInfo">
+        <rdfs:domain rdf:resource="https://schema.org/Product#Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SupplyChainInformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#atTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#atTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#identifierAsText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#identifierAsText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/identifier#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#atTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#atTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#ALID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#ALID">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#IDType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Carrier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Carrier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#ParticipantRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#ContentID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#ContentID">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#IDType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Distribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Distribution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#EIDRID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#EIDRID">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#IDType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#ProvidesParticipantRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#ParticipantRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#hasSpatiotemporalExtent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#IDType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#IDType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#hasIdentifierType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#IDType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#ManufacturingEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#ManufacturingEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#ParticipantRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#ParticipantRole"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Place">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Receiver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Receiver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#ParticipantRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#atPlace"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#atTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Storage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Storage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#SupplyChainInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#SupplyChainInformation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#hasEvent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/identifier#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#identifierAsText"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Transportation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Transportation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#sender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#sender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#ParticipantRole"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Product#Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product#Product">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#hasSupplyChainInfo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SupplyChainInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/identifier#Identifier -->
+
+    <owl:Class rdf:about="https://schema.org/identifier#Identifier">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#identifierAsText"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#ALID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#ALID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#IDType"/>
+        <sci:hasIdentifierType rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#ALID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#SCI_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#SCI_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent"/>
+        <sci:atPlace rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Stockholm"/>
+        <sci:hasIdentifierType rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#ALID"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-01T10:00:00</prov:atTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#Stockholm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#Stockholm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#i60_1500_LED_6000_HF_840_TW_OP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#i60_1500_LED_6000_HF_840_TW_OP">
+        <rdf:type rdf:resource="https://schema.org/Product#Product"/>
+        <sci:hasEvent rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SCI_001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/SupplyChain#2024-05-01T10:00:00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#2024-05-01T10:00:00">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#Time"/>
+        <sci:hasEvent rdf:resource="http://www.semanticweb.org/senp94001/SupplyChain#SCI_001"/>
+        <prov:atTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-01T10:00:00</prov:atTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#ALID"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#ContentID"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/SupplyChain#EIDRID"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

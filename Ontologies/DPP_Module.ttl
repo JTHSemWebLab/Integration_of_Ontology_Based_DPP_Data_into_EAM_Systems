@@ -1,0 +1,413 @@
+@prefix : <http://www.semanticweb.org/senp94001/DPPandDPPInformation/> .
+@prefix dpp: <http://www.semanticweb.org/senp94001/DPPandDPPInformation#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix scheme: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/senp94001/DPPandDPPInformation/> .
+
+<http://www.semanticweb.org/senp94001/DPPandDPPInformation> rdf:type owl:Ontology ;
+                                                   owl:versionIRI :v1 ;                                                
+                                                   dcterms:creator "Emil Fernando" ,
+                                                                   "Nivedhitha Pandi Kadavil" ;
+                                                   dcterms:contributor "Rahel Kebede" ,
+                                                                        "Peter Johansson" ,
+                                                                        "Annika Moscati" ;
+                                                   dcterms:created "2025-05-16"^^xsd:date ;
+                                                   dcterms:description "This ontology outlines the core schema of the Digital Product Passport (DPP), encompassing key product-related data such as component composition, disassembly instructions, and repair guidelines to support circularity and transparency." ;
+                                                   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                   dcterms:title "DPP Module" ;
+                                                   owl:versionInfo "1.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/Unit#unit
+<http://qudt.org/schema/qudt/Unit#unit> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                        rdfs:domain dpp:ProductCharacterstics ,
+                                                    dpp:ProductQuality .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#aboutPart
+dpp:aboutPart rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain dpp:CompositionInformation ;
+              rdfs:range <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#aboutWhole
+dpp:aboutWhole rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain dpp:CompositionInformation ;
+               rdfs:range <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#certificateDocument
+dpp:certificateDocument rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain dpp:CertificateInformation .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#characterstics
+dpp:characterstics rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain dpp:ProductCharacterstics .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#containsInformation
+dpp:containsInformation rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain dpp:DPP ;
+                        rdfs:range dpp:dpp-info .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#describes
+dpp:describes rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain dpp:DPP ;
+              rdfs:range <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#disassemblyInstructionDocument
+dpp:disassemblyInstructionDocument rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                   rdfs:domain dpp:DisassemblyInformation .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#owner
+dpp:owner rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain dpp:DPP ;
+          rdfs:range dpp:dpp-prov .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#quality
+dpp:quality rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain dpp:ProductQuality .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#repairInstructionDocuments
+dpp:repairInstructionDocuments rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty ;
+                               rdfs:domain dpp:RepairInstructions .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#responsibleActor
+dpp:responsibleActor rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain dpp:dpp-info ;
+                     rdfs:range dpp:dpp-prov .
+
+
+###  https://schema.org/hasPart#hasPart
+<https://schema.org/hasPart#hasPart> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     rdfs:domain dpp:dpp-ODP ;
+                                     rdfs:range dpp:dpp-ODP .
+
+
+###  https://schema.org/supersededBy#supersededBy
+<https://schema.org/supersededBy#supersededBy> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain dpp:dpp-info ;
+                                               rdfs:range dpp:dpp-info .
+
+
+###  https://schema.org/value#Value
+<https://schema.org/value#Value> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#EndTime
+dpp:EndTime rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf dpp:hasTime ;
+            rdfs:domain dpp:LegalGuarantee ;
+            rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasInvalidTime
+dpp:hasInvalidTime rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf dpp:hasTime ;
+                   rdfs:domain dpp:DPP ,
+                               dpp:dpp-info ;
+                   rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasTime
+dpp:hasTime rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain dpp:DPP ,
+                        dpp:dpp-info ;
+            rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#startTime
+dpp:startTime rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf dpp:hasTime ;
+              rdfs:domain dpp:LegalGuarantee ;
+              rdfs:range xsd:dateTimeStamp .
+
+
+###  https://schema.org/value#value
+<https://schema.org/value#value> rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain dpp:ProductCharacterstics ,
+                                             dpp:ProductQuality ;
+                                 rdfs:range rdfs:Literal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/Unit#Unit
+<http://qudt.org/schema/qudt/Unit#Unit> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Authority
+dpp:Authority rdf:type owl:Class ;
+              rdfs:subClassOf dpp:dpp-prov .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#CertificateInformation
+dpp:CertificateInformation rdf:type owl:Class ;
+                           rdfs:subClassOf dpp:dpp-info .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Certification
+dpp:Certification rdf:type owl:Class ;
+                  rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Component
+dpp:Component rdf:type owl:Class ;
+              rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#ComponentDPP
+dpp:ComponentDPP rdf:type owl:Class ;
+                 rdfs:subClassOf dpp:DPP .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#CompositionInformation
+dpp:CompositionInformation rdf:type owl:Class ;
+                           rdfs:subClassOf dpp:dpp-info .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Consumer
+dpp:Consumer rdf:type owl:Class ;
+             rdfs:subClassOf dpp:dpp-prov .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#ConsumerProductDPP
+dpp:ConsumerProductDPP rdf:type owl:Class ;
+                       rdfs:subClassOf dpp:DPP .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP
+dpp:DPP rdf:type owl:Class ;
+        rdfs:subClassOf dpp:dpp-ODP ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty dpp:containsInformation ;
+                          owl:someValuesFrom dpp:dpp-info
+                        ] ;
+        owl:disjointWith <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#DataCarrier
+dpp:DataCarrier rdf:type owl:Class ;
+                rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#DisassemblyInformation
+dpp:DisassemblyInformation rdf:type owl:Class ;
+                           rdfs:subClassOf dpp:dpp-info .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#EnvironmentalImpact
+dpp:EnvironmentalImpact rdf:type owl:Class ;
+                        rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#LegalGuarantee
+dpp:LegalGuarantee rdf:type owl:Class ;
+                   rdfs:subClassOf dpp:dpp-info .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#LifeCycle
+dpp:LifeCycle rdf:type owl:Class ;
+              rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Maintenance
+dpp:Maintenance rdf:type owl:Class ;
+                rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Manufacturer
+dpp:Manufacturer rdf:type owl:Class ;
+                 rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Material
+dpp:Material rdf:type owl:Class ;
+             rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#MaterialDPP
+dpp:MaterialDPP rdf:type owl:Class ;
+                rdfs:subClassOf dpp:DPP .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductCharacterstics
+dpp:ProductCharacterstics rdf:type owl:Class ;
+                          rdfs:subClassOf dpp:dpp-info .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductQuality
+dpp:ProductQuality rdf:type owl:Class ;
+                   rdfs:subClassOf dpp:dpp-info .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#RepairInstructions
+dpp:RepairInstructions rdf:type owl:Class ;
+                       rdfs:subClassOf dpp:dpp-info .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Substance
+dpp:Substance rdf:type owl:Class ;
+              rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#SubstanceDPP
+dpp:SubstanceDPP rdf:type owl:Class ;
+                 rdfs:subClassOf dpp:DPP .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#SupplyChainInformation
+dpp:SupplyChainInformation rdf:type owl:Class ;
+                           rdfs:subClassOf <https://schema.org/Product#Product> .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#ValueChainActor
+dpp:ValueChainActor rdf:type owl:Class ;
+                    rdfs:subClassOf dpp:dpp-prov .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-ODP
+dpp:dpp-ODP rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info
+dpp:dpp-info rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-prov
+dpp:dpp-prov rdf:type owl:Class .
+
+
+###  https://schema.org/Product#Product
+<https://schema.org/Product#Product> rdf:type owl:Class ;
+                                     rdfs:subClassOf dpp:dpp-ODP ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://schema.org/hasPart#hasPart> ;
+                                                       owl:someValuesFrom dpp:DPP
+                                                     ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP_001
+dpp:DPP_001 rdf:type owl:NamedIndividual ,
+                     dpp:DPP ;
+            dpp:describes dpp:i60_1500_LED_6000_HF_840_TW_OP ;
+            dpp:responsibleActor dpp:Glamox_AS .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#ENEC_Certificate_i60_2021
+dpp:ENEC_Certificate_i60_2021 rdf:type owl:NamedIndividual ,
+                                       dpp:CertificateInformation .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#Glamox_AS
+dpp:Glamox_AS rdf:type owl:NamedIndividual ,
+                       dpp:Manufacturer ;
+              dpp:responsibleActor dpp:Glamox_AS .
+
+
+###  http://www.semanticweb.org/senp94001/DPPandDPPInformation#i60_1500_LED_6000_HF_840_TW_OP
+dpp:i60_1500_LED_6000_HF_840_TW_OP rdf:type owl:NamedIndividual ,
+                                            <https://schema.org/Product#Product> ;
+                                   dpp:certificateDocument dpp:ENEC_Certificate_i60_2021 ;
+                                   dpp:responsibleActor dpp:Glamox_AS .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dpp:Certification
+                dpp:Component
+                dpp:DataCarrier
+                dpp:EnvironmentalImpact
+                dpp:LifeCycle
+                dpp:Maintenance
+                dpp:Manufacturer
+                dpp:Material
+                dpp:Substance
+                dpp:SupplyChainInformation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dpp:Certification
+                dpp:Component
+                dpp:DataCarrier
+                dpp:EnvironmentalImpact
+                dpp:LifeCycle
+                dpp:Manufacturer
+                dpp:Material
+                dpp:Substance
+                dpp:SupplyChainInformation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dpp:Certification
+                dpp:Component
+                dpp:DataCarrier
+                dpp:EnvironmentalImpact
+                dpp:LifeCycle
+                dpp:Material
+                dpp:Substance
+                dpp:SupplyChainInformation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dpp:ComponentDPP
+                dpp:ConsumerProductDPP
+                dpp:MaterialDPP
+                dpp:SubstanceDPP
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

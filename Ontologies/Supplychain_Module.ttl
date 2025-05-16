@@ -1,0 +1,279 @@
+@prefix : <http://www.semanticweb.org/senp94001/SupplyChain/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sci: <http://www.semanticweb.org/senp94001/SupplyChain#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix scheme: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/senp94001/SupplyChain/> .
+
+<http://www.semanticweb.org/senp94001/SupplyChain> rdf:type owl:Ontology ;
+                                                   owl:versionIRI :v1 ;                                                
+                                                   dcterms:creator "Emil Fernando" ,
+                                                                   "Nivedhitha Pandi Kadavil" ;
+                                                   dcterms:contributor "Rahel Kebede" ,
+                                                                        "Peter Johansson" ,
+                                                                        "Annika Moscati" ;
+                                                   dcterms:created "2025-05-16"^^xsd:date ;
+                                                   dcterms:description "This ontology captures the flow of products across the supply chain within a Digital Product Passport (DPP), modeling logistics events, stakeholder roles, and temporal-spatial data for complete provenance tracking." ;
+                                                   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                   dcterms:title "Supplychain Module" ;
+                                                   owl:versionInfo "1.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#ProvidesParticipantRole
+sci:ProvidesParticipantRole rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            rdfs:domain sci:Event ;
+                            rdfs:range sci:ParticipantRole .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#atPlace
+sci:atPlace rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain sci:SpatiotemporalExtent ;
+            rdfs:range sci:Place .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#hasEvent
+sci:hasEvent rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:range sci:Event .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#hasIdentifier
+sci:hasIdentifier rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:range <https://schema.org/identifier#Identifier> .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#hasIdentifierType
+sci:hasIdentifierType rdf:type owl:ObjectProperty ;
+                      rdfs:range sci:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#hasSpatiotemporalExtent
+sci:hasSpatiotemporalExtent rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            rdfs:domain sci:Event ;
+                            rdfs:range sci:SpatiotemporalExtent .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#hasSupplyChainInfo
+sci:hasSupplyChainInfo rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://schema.org/Product#Product> ;
+                       rdfs:range sci:SupplyChainInformation .
+
+
+###  http://www.w3.org/ns/prov#atTime
+prov:atTime rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain sci:SpatiotemporalExtent ;
+            rdfs:range sci:Time .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#identifierAsText
+sci:identifierAsText rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain <https://schema.org/identifier#Identifier> ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.w3.org/ns/prov#atTime
+prov:atTime rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#ALID
+sci:ALID rdf:type owl:Class ;
+         rdfs:subClassOf sci:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Carrier
+sci:Carrier rdf:type owl:Class ;
+            rdfs:subClassOf sci:ParticipantRole .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#ContentID
+sci:ContentID rdf:type owl:Class ;
+              rdfs:subClassOf sci:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Distribution
+sci:Distribution rdf:type owl:Class ;
+                 rdfs:subClassOf sci:Event .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#EIDRID
+sci:EIDRID rdf:type owl:Class ;
+           rdfs:subClassOf sci:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Event
+sci:Event rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty sci:ProvidesParticipantRole ;
+                            owl:someValuesFrom sci:ParticipantRole
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty sci:hasSpatiotemporalExtent ;
+                            owl:someValuesFrom sci:SpatiotemporalExtent
+                          ] .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#IDType
+sci:IDType rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty sci:hasIdentifierType ;
+                             owl:someValuesFrom sci:IDType
+                           ] .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#ManufacturingEvent
+sci:ManufacturingEvent rdf:type owl:Class ;
+                       rdfs:subClassOf sci:Event .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#ParticipantRole
+sci:ParticipantRole rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Place
+sci:Place rdf:type owl:Class ;
+          rdfs:subClassOf sci:SpatiotemporalExtent ;
+          owl:disjointWith sci:Time .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Receiver
+sci:Receiver rdf:type owl:Class ;
+             rdfs:subClassOf sci:ParticipantRole .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#SpatiotemporalExtent
+sci:SpatiotemporalExtent rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty sci:atPlace ;
+                                           owl:someValuesFrom sci:Place
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty prov:atTime ;
+                                           owl:someValuesFrom sci:Time
+                                         ] .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Storage
+sci:Storage rdf:type owl:Class ;
+            rdfs:subClassOf sci:Event .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#SupplyChainInformation
+sci:SupplyChainInformation rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty sci:hasEvent ;
+                                             owl:someValuesFrom sci:Event
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty sci:hasIdentifier ;
+                                             owl:someValuesFrom <https://schema.org/identifier#Identifier>
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty sci:identifierAsText ;
+                                             owl:allValuesFrom xsd:string
+                                           ] .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Time
+sci:Time rdf:type owl:Class ;
+         rdfs:subClassOf sci:SpatiotemporalExtent .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Transportation
+sci:Transportation rdf:type owl:Class ;
+                   rdfs:subClassOf sci:Event .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#sender
+sci:sender rdf:type owl:Class ;
+           rdfs:subClassOf sci:ParticipantRole .
+
+
+###  https://schema.org/Product#Product
+<https://schema.org/Product#Product> rdf:type owl:Class ;
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty sci:hasSupplyChainInfo ;
+                                                       owl:someValuesFrom sci:SupplyChainInformation
+                                                     ] .
+
+
+###  https://schema.org/identifier#Identifier
+<https://schema.org/identifier#Identifier> rdf:type owl:Class ;
+                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty sci:identifierAsText ;
+                                                             owl:allValuesFrom xsd:string
+                                                           ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#ALID
+sci:ALID rdf:type owl:NamedIndividual ,
+                  sci:IDType ;
+         sci:hasIdentifierType sci:ALID .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#SCI_001
+sci:SCI_001 rdf:type owl:NamedIndividual ,
+                     sci:Event ,
+                     sci:SpatiotemporalExtent ;
+            sci:atPlace sci:Stockholm ;
+            sci:hasIdentifierType sci:ALID ;
+            prov:atTime "2024-05-01T10:00:00"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#Stockholm
+sci:Stockholm rdf:type owl:NamedIndividual ,
+                       sci:Place .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#i60_1500_LED_6000_HF_840_TW_OP
+sci:i60_1500_LED_6000_HF_840_TW_OP rdf:type owl:NamedIndividual ,
+                                            <https://schema.org/Product#Product> ;
+                                   sci:hasEvent sci:SCI_001 .
+
+
+###  http://www.semanticweb.org/senp94001/SupplyChain#2024-05-01T10:00:00
+<http://www.semanticweb.org/senp94001/SupplyChain#2024-05-01T10:00:00> rdf:type owl:NamedIndividual ,
+                                                                                sci:Time ;
+                                                                       sci:hasEvent sci:SCI_001 ;
+                                                                       prov:atTime "2024-05-01T10:00:00"^^xsd:dateTime .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( sci:ALID
+                sci:ContentID
+                sci:EIDRID
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

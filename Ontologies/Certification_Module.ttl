@@ -1,0 +1,223 @@
+@prefix : <http://www.semanticweb.org/senp94001/Certification#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cert: <http://www.semanticweb.org/senp94001/Certification#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix coreontology: <http://www.semanticweb.org/senp94001/coreontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/senp94001/Certification#> .
+
+<http://www.semanticweb.org/senp94001/Certification> rdf:type owl:Ontology ;
+                                                   owl:versionIRI :v1 ;                                                
+                                                   dcterms:creator "Emil Fernando" ,
+                                                                   "Nivedhitha Pandi Kadavil" ;
+                                                   dcterms:contributor "Rahel Kebede" ,
+                                                                        "Peter Johansson" ,
+                                                                        "Annika Moscati" ;
+                                                   dcterms:created "2025-05-16"^^xsd:date ;
+                                                   dcterms:description "This ontology defines the structure for representing product certifications within a Digital Product Passport (DPP), including certifying bodies, verification roles, and identifiers that establish product compliance and trust." ;
+                                                   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                   dcterms:title "Certification Module" ;
+                                                   owl:versionInfo "1.0" .
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/Certification#PerformedBy
+cert:PerformedBy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain prov:Activity ;
+                 rdfs:range prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/Certification#PerformsAgentRole
+cert:PerformsAgentRole rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain prov:Agent ;
+                       rdfs:range prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/Certification#hasCertification
+cert:hasCertification rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain <https://schema.org/Product#Product> ;
+                      rdfs:range cert:Certification .
+
+
+###  http://www.semanticweb.org/senp94001/Certification#hasIdentifier
+cert:hasIdentifier rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain cert:Certification ;
+                   rdfs:range <https://schema.org/identifier#Identifier> .
+
+
+###  http://www.semanticweb.org/senp94001/Certification#hasIdentifierType
+cert:hasIdentifierType rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://schema.org/identifier#Identifier> ;
+                       rdfs:range cert:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/coreontology#ProvidesAgentRole
+coreontology:ProvidesAgentRole rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty ;
+                               rdfs:domain cert:Certification ;
+                               rdfs:range prov:Role .
+
+
+###  http://www.w3.org/ns/prov#used
+prov:used rdf:type owl:ObjectProperty ;
+          rdfs:domain prov:Activity .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+prov:wasAttributedTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain prov:Entity ;
+                     rdfs:range prov:Agent .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Entity .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Activity .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/coreontology#identifierAsText
+coreontology:identifierAsText rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain <https://schema.org/identifier#Identifier> ;
+                              rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/Certification#Certification
+cert:Certification rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty cert:hasIdentifier ;
+                                     owl:someValuesFrom <https://schema.org/identifier#Identifier>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty coreontology:ProvidesAgentRole ;
+                                     owl:someValuesFrom prov:Role
+                                   ] .
+
+
+###  http://www.semanticweb.org/senp94001/Certification#CertifyingAuthority
+cert:CertifyingAuthority rdf:type owl:Class ;
+                         rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/Certification#IDType
+cert:IDType rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty cert:hasIdentifierType ;
+                              owl:someValuesFrom cert:IDType
+                            ] .
+
+
+###  http://www.semanticweb.org/senp94001/coreontology#CertifyingRole
+coreontology:CertifyingRole rdf:type owl:Class ;
+                            rdfs:subClassOf prov:Role .
+
+
+###  http://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty cert:PerformedBy ;
+                                owl:someValuesFrom prov:Agent
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty prov:used ;
+                                owl:someValuesFrom prov:Entity
+                              ] .
+
+
+###  http://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty cert:PerformsAgentRole ;
+                             owl:someValuesFrom prov:Role
+                           ] .
+
+
+###  http://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty prov:wasAttributedTo ;
+                              owl:someValuesFrom prov:Agent
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty prov:wasDerivedFrom ;
+                              owl:someValuesFrom prov:Entity
+                            ] .
+
+
+###  http://www.w3.org/ns/prov#Role
+prov:Role rdf:type owl:Class .
+
+
+###  https://schema.org/Product#Product
+<https://schema.org/Product#Product> rdf:type owl:Class ;
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty cert:hasCertification ;
+                                                       owl:someValuesFrom cert:Certification
+                                                     ] .
+
+
+###  https://schema.org/identifier#Identifier
+<https://schema.org/identifier#Identifier> rdf:type owl:Class ;
+                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty cert:hasIdentifier ;
+                                                             owl:someValuesFrom <https://schema.org/identifier#Identifier>
+                                                           ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/coreontology#ENEC_Certificate_i60_2021
+coreontology:ENEC_Certificate_i60_2021 rdf:type owl:NamedIndividual ,
+                                                cert:Certification ,
+                                                <https://schema.org/identifier#Identifier> ;
+                                       cert:hasIdentifierType coreontology:ENEC_ID ;
+                                       coreontology:identifierAsText "ENEC_ID_443053" .
+
+
+###  http://www.semanticweb.org/senp94001/coreontology#ENEC_ID
+coreontology:ENEC_ID rdf:type owl:NamedIndividual ,
+                              cert:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/coreontology#ENEC_ID_443053
+coreontology:ENEC_ID_443053 rdf:type owl:NamedIndividual ,
+                                     <https://schema.org/identifier#Identifier> ;
+                            coreontology:identifierAsText "ENEC_ID_443053" .
+
+
+###  http://www.semanticweb.org/senp94001/coreontology#i60-1500_LED_6000_HF_840_TW_OP
+coreontology:i60-1500_LED_6000_HF_840_TW_OP rdf:type owl:NamedIndividual ,
+                                                     <https://schema.org/Product#Product> ;
+                                            cert:hasCertification coreontology:ENEC_Certificate_i60_2021 .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

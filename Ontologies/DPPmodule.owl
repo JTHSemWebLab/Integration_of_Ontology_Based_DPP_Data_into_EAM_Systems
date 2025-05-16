@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/senp94001/DPPandDPPInformation/"
+     xml:base="http://www.semanticweb.org/senp94001/DPPandDPPInformation/"
+     xmlns:dpp="http://www.semanticweb.org/senp94001/DPPandDPPInformation#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:scheme="https://schema.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Unit#unit -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/Unit#unit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductCharacterstics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#aboutPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#aboutPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#CompositionInformation"/>
+        <rdfs:range rdf:resource="https://schema.org/Product#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#aboutWhole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#aboutWhole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#CompositionInformation"/>
+        <rdfs:range rdf:resource="https://schema.org/Product#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#certificateDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#certificateDocument">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#CertificateInformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#characterstics -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#characterstics">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductCharacterstics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#containsInformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#containsInformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#describes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#describes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+        <rdfs:range rdf:resource="https://schema.org/Product#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#disassemblyInstructionDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#disassemblyInstructionDocument">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DisassemblyInformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#owner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#owner">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-prov"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#quality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#quality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#repairInstructionDocuments -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#repairInstructionDocuments">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#RepairInstructions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#responsibleActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#responsibleActor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-prov"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/hasPart#hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/hasPart#hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-ODP"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-ODP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/supersededBy#supersededBy -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/supersededBy#supersededBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/value#Value -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/value#Value">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#EndTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#EndTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#LegalGuarantee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasInvalidTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasInvalidTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#startTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#startTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#LegalGuarantee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/value#value -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/value#value">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductCharacterstics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductQuality"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Unit#Unit -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit#Unit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Authority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Authority">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-prov"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#CertificateInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#CertificateInformation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Certification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Certification">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Component">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#ComponentDPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ComponentDPP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#CompositionInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#CompositionInformation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Consumer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Consumer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-prov"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#ConsumerProductDPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ConsumerProductDPP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-ODP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#containsInformation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#DataCarrier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DataCarrier">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#DisassemblyInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DisassemblyInformation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#EnvironmentalImpact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#EnvironmentalImpact">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#LegalGuarantee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#LegalGuarantee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#LifeCycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#LifeCycle">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Maintenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Maintenance">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Manufacturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Manufacturer">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Material -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Material">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#MaterialDPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#MaterialDPP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductCharacterstics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductCharacterstics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductQuality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ProductQuality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#RepairInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#RepairInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Substance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Substance">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#SubstanceDPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#SubstanceDPP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#SupplyChainInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#SupplyChainInformation">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#ValueChainActor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ValueChainActor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-prov"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-ODP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-ODP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-info"/>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-prov -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-prov"/>
+    
+
+
+    <!-- https://schema.org/Product#Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product#Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#dpp-ODP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://schema.org/hasPart#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DPP"/>
+        <dpp:describes rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#i60_1500_LED_6000_HF_840_TW_OP"/>
+        <dpp:responsibleActor rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Glamox_AS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#ENEC_Certificate_i60_2021 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ENEC_Certificate_i60_2021">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#CertificateInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#Glamox_AS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Glamox_AS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Manufacturer"/>
+        <dpp:responsibleActor rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Glamox_AS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/DPPandDPPInformation#i60_1500_LED_6000_HF_840_TW_OP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#i60_1500_LED_6000_HF_840_TW_OP">
+        <rdf:type rdf:resource="https://schema.org/Product#Product"/>
+        <dpp:certificateDocument rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ENEC_Certificate_i60_2021"/>
+        <dpp:responsibleActor rdf:resource="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Glamox_AS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Certification"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Component"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DataCarrier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#EnvironmentalImpact"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#LifeCycle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Maintenance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Manufacturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Material"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Substance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#SupplyChainInformation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Certification"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Component"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DataCarrier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#EnvironmentalImpact"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#LifeCycle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Manufacturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Material"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Substance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#SupplyChainInformation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Certification"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Component"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#DataCarrier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#EnvironmentalImpact"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#LifeCycle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Material"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#Substance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#SupplyChainInformation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ComponentDPP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#ConsumerProductDPP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#MaterialDPP"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/senp94001/DPPandDPPInformation#SubstanceDPP"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

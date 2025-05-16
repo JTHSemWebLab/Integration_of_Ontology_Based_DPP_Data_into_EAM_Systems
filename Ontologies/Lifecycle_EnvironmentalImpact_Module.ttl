@@ -1,0 +1,480 @@
+@prefix : <http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lcei: <http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#> .
+@prefix prov: <https://www.w3.org/ns/prov#> .
+@prefix qudt: <https://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact/> .
+
+<http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact> rdf:type owl:Ontology ;
+                                                   owl:versionIRI :v1 ;                                                
+                                                   dcterms:creator "Emil Fernando" ,
+                                                                   "Nivedhitha Pandi Kadavil" ;
+                                                   dcterms:contributor "Rahel Kebede" ,
+                                                                        "Peter Johansson" ,
+                                                                        "Annika Moscati" ;
+                                                   dcterms:created "2025-05-16"^^xsd:date ;
+                                                   dcterms:description "This ontology models the environmental footprint of products within a Digital Product Passport (DPP), capturing lifecycle stages, material flows, and sustainability metrics including emissions and resource consumption." ;
+                                                   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                   dcterms:title "Lifecycle and Environmental Impact Module" ;
+                                                   owl:versionInfo "1.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#PerformedBy
+lcei:PerformedBy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain prov:Activity ;
+                 rdfs:range prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#PerformsAgentRole
+lcei:PerformsAgentRole rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain prov:Agent ;
+                       rdfs:range prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ProvidesAgentRole
+lcei:ProvidesAgentRole rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:range prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#atPlace
+lcei:atPlace rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain lcei:SpatiotemporalExtent ;
+             rdfs:range schema:Place .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasEnvironmentalImpact
+lcei:hasEnvironmentalImpact rdf:type owl:ObjectProperty ;
+                            rdfs:range lcei:EnvironmentalImpact .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasEvent
+lcei:hasEvent rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:range lcei:Event .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasLifeCycle
+lcei:hasLifeCycle rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain schema:Product ;
+                  rdfs:range lcei:LifeCycle .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantity
+lcei:hasQuantity rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:range <http://dbpedia.org/resource/Quantity> .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantityKind
+lcei:hasQuantityKind rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:range qudt:QuantityKind .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasQuantityValue
+lcei:hasQuantityValue rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:range qudt:QuantityValue .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasRawMaterial
+lcei:hasRawMaterial rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasSpatiotemporalExtent
+lcei:hasSpatiotemporalExtent rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdfs:domain lcei:Event ;
+                             rdfs:range lcei:SpatiotemporalExtent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#hasUnit
+lcei:hasUnit rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:range qudt:Unit .
+
+
+###  https://www.w3.org/ns/prov#atTime
+prov:atTime rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain lcei:SpatiotemporalExtent ;
+            rdfs:range lcei:Time .
+
+
+###  https://www.w3.org/ns/prov#used
+prov:used rdf:type owl:ObjectProperty ;
+          rdfs:domain prov:Activity .
+
+
+###  https://www.w3.org/ns/prov#wasAttributedTo
+prov:wasAttributedTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain prov:Entity ;
+                     rdfs:range prov:Agent .
+
+
+###  https://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Entity .
+
+
+###  https://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Activity .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://qudt.org/schema/qudt/numericValue
+qudt:numericValue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain qudt:QuantityValue ;
+                  rdfs:range xsd:double .
+
+
+###  https://www.w3.org/ns/prov#atTime
+prov:atTime rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/resource/Quantity
+<http://dbpedia.org/resource/Quantity> rdf:type owl:Class ;
+                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                         owl:onProperty lcei:hasQuantityKind ;
+                                                         owl:someValuesFrom qudt:QuantityKind
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty lcei:hasQuantityValue ;
+                                                         owl:someValuesFrom qudt:QuantityValue
+                                                       ] .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#AssemblingAgent
+lcei:AssemblingAgent rdf:type owl:Class ;
+                     rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#AssemblingRole
+lcei:AssemblingRole rdf:type owl:Class ;
+                    rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Design
+lcei:Design rdf:type owl:Class ;
+            rdfs:subClassOf lcei:Event .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DesigningAgent
+lcei:DesigningAgent rdf:type owl:Class ;
+                    rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DesigningRole
+lcei:DesigningRole rdf:type owl:Class ;
+                   rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DissemblingAgent
+lcei:DissemblingAgent rdf:type owl:Class ;
+                      rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#DissemblingRole
+lcei:DissemblingRole rdf:type owl:Class ;
+                     rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EndOfLife
+lcei:EndOfLife rdf:type owl:Class ;
+               rdfs:subClassOf lcei:Event .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#EnvironmentalImpact
+lcei:EnvironmentalImpact rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty lcei:hasQuantity ;
+                                           owl:someValuesFrom <http://dbpedia.org/resource/Quantity>
+                                         ] .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Event
+lcei:Event rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty lcei:ProvidesAgentRole ;
+                             owl:someValuesFrom prov:Role
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty lcei:hasSpatiotemporalExtent ;
+                             owl:someValuesFrom lcei:SpatiotemporalExtent
+                           ] .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#InstallingAgent
+lcei:InstallingAgent rdf:type owl:Class ;
+                     rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#InstallingRole
+lcei:InstallingRole rdf:type owl:Class ;
+                    rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#LifeCycle
+lcei:LifeCycle rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty lcei:hasEnvironmentalImpact ;
+                                 owl:someValuesFrom lcei:EnvironmentalImpact
+                               ] .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Maintenance
+lcei:Maintenance rdf:type owl:Class ;
+                 rdfs:subClassOf lcei:Event .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Manufacturing
+lcei:Manufacturing rdf:type owl:Class ;
+                   rdfs:subClassOf lcei:Event .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ManufacturingAgent
+lcei:ManufacturingAgent rdf:type owl:Class ;
+                        rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#ManufacturingRole
+lcei:ManufacturingRole rdf:type owl:Class ;
+                       rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#MiningAgent
+lcei:MiningAgent rdf:type owl:Class ;
+                 rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#MiningRole
+lcei:MiningRole rdf:type owl:Class ;
+                rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RawMaterialExtraction
+lcei:RawMaterialExtraction rdf:type owl:Class ;
+                           rdfs:subClassOf lcei:Event .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RecyclingAgent
+lcei:RecyclingAgent rdf:type owl:Class ;
+                    rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#RecyclingRole
+lcei:RecyclingRole rdf:type owl:Class ;
+                   rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#SpatiotemporalExtent
+lcei:SpatiotemporalExtent rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty lcei:atPlace ;
+                                            owl:someValuesFrom schema:Place
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty prov:atTime ;
+                                            owl:someValuesFrom lcei:Time
+                                          ] .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TechnicianAgent
+lcei:TechnicianAgent rdf:type owl:Class ;
+                     rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TechnicianRole
+lcei:TechnicianRole rdf:type owl:Class ;
+                    rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Time
+lcei:Time rdf:type owl:Class ;
+          rdfs:subClassOf lcei:SpatiotemporalExtent ;
+          owl:disjointWith schema:Place .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TransportingAgent
+lcei:TransportingAgent rdf:type owl:Class ;
+                       rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#TransportingRole
+lcei:TransportingRole rdf:type owl:Class ;
+                      rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Usage
+lcei:Usage rdf:type owl:Class ;
+           rdfs:subClassOf lcei:Event .
+
+
+###  https://qudt.org/schema/qudt/QuantityKind
+qudt:QuantityKind rdf:type owl:Class .
+
+
+###  https://qudt.org/schema/qudt/QuantityValue
+qudt:QuantityValue rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty lcei:hasUnit ;
+                                     owl:someValuesFrom qudt:Unit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty qudt:numericValue ;
+                                     owl:allValuesFrom xsd:double
+                                   ] .
+
+
+###  https://qudt.org/schema/qudt/Unit
+qudt:Unit rdf:type owl:Class .
+
+
+###  https://schema.org/Place
+schema:Place rdf:type owl:Class ;
+             rdfs:subClassOf lcei:SpatiotemporalExtent .
+
+
+###  https://schema.org/Product
+schema:Product rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty lcei:hasEnvironmentalImpact ;
+                                 owl:someValuesFrom lcei:EnvironmentalImpact
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty lcei:hasLifeCycle ;
+                                 owl:someValuesFrom lcei:LifeCycle
+                               ] .
+
+
+###  https://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty lcei:PerformedBy ;
+                                owl:someValuesFrom prov:Agent
+                              ] .
+
+
+###  https://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty lcei:PerformsAgentRole ;
+                             owl:someValuesFrom prov:Role
+                           ] .
+
+
+###  https://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty prov:wasAttributedTo ;
+                              owl:someValuesFrom prov:Agent
+                            ] .
+
+
+###  https://www.w3.org/ns/prov#Role
+prov:Role rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#CO2_emissions
+lcei:CO2_emissions rdf:type owl:NamedIndividual ,
+                            qudt:QuantityKind ,
+                            qudt:QuantityValue ;
+                   lcei:hasEnvironmentalImpact lcei:CO2_emissions ;
+                   lcei:hasEvent lcei:UsageEvent_001 ;
+                   lcei:hasUnit lcei:KgCO2eq ;
+                   qudt:numericValue "120.0"^^xsd:double .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Energy_Consumption
+lcei:Energy_Consumption rdf:type owl:NamedIndividual ,
+                                 qudt:QuantityKind ,
+                                 qudt:QuantityValue ;
+                        lcei:hasEnvironmentalImpact lcei:Energy_Consumption ;
+                        lcei:hasEvent lcei:UsageEvent_001 ;
+                        lcei:hasUnit lcei:kWh ;
+                        qudt:numericValue "25.5"^^xsd:double .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#KgCO2eq
+lcei:KgCO2eq rdf:type owl:NamedIndividual ,
+                      qudt:Unit .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#Norway
+lcei:Norway rdf:type owl:NamedIndividual ,
+                     schema:Place .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#UsageEvent_001
+lcei:UsageEvent_001 rdf:type owl:NamedIndividual ,
+                             lcei:Event ;
+                    lcei:atPlace lcei:Norway ;
+                    lcei:hasLifeCycle lcei:UsageEvent_001 ;
+                    prov:atTime "2025-05-00T12:00:00"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#i60_1500_LED_6000_HF_840_TW_OP
+lcei:i60_1500_LED_6000_HF_840_TW_OP rdf:type owl:NamedIndividual ,
+                                             schema:Product ;
+                                    lcei:hasEvent lcei:UsageEvent_001 .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#kWh
+lcei:kWh rdf:type owl:NamedIndividual ,
+                  qudt:Unit .
+
+
+###  http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#2025-05-00T12:00:00
+<http://www.semanticweb.org/senp94001/LifeCycleandEnvironmentalImpact#2025-05-00T12:00:00> rdf:type owl:NamedIndividual ,
+                                                                                                    lcei:Time .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( lcei:Design
+                lcei:EndOfLife
+                lcei:Maintenance
+                lcei:Manufacturing
+                lcei:RawMaterialExtraction
+                lcei:Usage
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

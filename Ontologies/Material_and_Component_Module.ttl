@@ -1,0 +1,589 @@
+@prefix : <http://www.semanticweb.org/senp94001/MaterialandComponent/> .
+@prefix mc: <http://www.semanticweb.org/senp94001/MaterialandComponent#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <https://www.w3.org/ns/prov#> .
+@prefix qudt: <https://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix scheme: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/senp94001/MaterialandComponent/> .
+
+<http://www.semanticweb.org/senp94001/MaterialandComponent> rdf:type owl:Ontology ;
+                                                   owl:versionIRI :v1 ;                                                
+                                                   dcterms:creator "Emil Fernando" ,
+                                                                   "Nivedhitha Pandi Kadavil" ;
+                                                   dcterms:contributor "Rahel Kebede" ,
+                                                                        "Peter Johansson" ,
+                                                                        "Annika Moscati" ;
+                                                   dcterms:created "2025-05-16"^^xsd:date ;
+                                                   dcterms:description "This ontology defines the properties and relationships of materials and components within a Digital Product Passport (DPP), including physical attributes, hazardous content, and lifecycle expectations for safe and sustainable design." ;
+                                                   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                   dcterms:title "Material and Component Module" ;
+                                                   owl:versionInfo "1.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ManufacturedBy
+mc:ManufacturedBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf prov:wasGeneratedBy .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#PerformedBy
+mc:PerformedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain prov:Activity ;
+               rdfs:range prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#PerformsAgentRole
+mc:PerformsAgentRole rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain prov:Agent ;
+                     rdfs:range prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ProvidesAgentRole
+mc:ProvidesAgentRole rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:range prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasComponent
+mc:hasComponent rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasHazardousMaterial
+mc:hasHazardousMaterial rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:range mc:HazardousMaterial .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasIdentifier
+mc:hasIdentifier rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:range scheme:identifier .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasIdentifierType
+mc:hasIdentifierType rdf:type owl:ObjectProperty ;
+                     rdfs:domain scheme:identifier ;
+                     rdfs:range mc:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasManufacturer
+mc:hasManufacturer rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasMaterial
+mc:hasMaterial rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasName
+mc:hasName rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:range scheme:name .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasProperty
+mc:hasProperty rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:range mc:Property .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasQuantity
+mc:hasQuantity rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:range <http://dbpedia.org/resource/Quantity> .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasQuantityKind
+mc:hasQuantityKind rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain <http://dbpedia.org/resource/Quantity> ;
+                   rdfs:range qudt:QuantityKind .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasQuantityValue
+mc:hasQuantityValue rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain <http://dbpedia.org/resource/Quantity> ;
+                    rdfs:range qudt:QuantityValue .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasRawMaterial
+mc:hasRawMaterial rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:range mc:RawMaterial .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasSupplyChainInfo
+mc:hasSupplyChainInfo rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf prov:wasGeneratedBy .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasTemporalExtent
+mc:hasTemporalExtent rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain prov:Role ;
+                     rdfs:range mc:TemporalExtent .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasunit
+mc:hasunit rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://schema.org/hasPart
+scheme:hasPart rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.w3.org/ns/prov#used
+prov:used rdf:type owl:ObjectProperty ;
+          rdfs:domain prov:Activity .
+
+
+###  https://www.w3.org/ns/prov#wasAttributedTo
+prov:wasAttributedTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain prov:Entity ;
+                     rdfs:range prov:Agent .
+
+
+###  https://www.w3.org/ns/prov#wasDerivedFrom
+prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Entity .
+
+
+###  https://www.w3.org/ns/prov#wasGeneratedBy
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain prov:Entity ;
+                    rdfs:range prov:Activity .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#hasNumericValue
+mc:hasNumericValue rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain qudt:QuantityValue ;
+                   rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#identifierAsText
+mc:identifierAsText rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain scheme:identifier ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#nameAsString
+mc:nameAsString rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain scheme:name ;
+                rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/resource/Quantity
+<http://dbpedia.org/resource/Quantity> rdf:type owl:Class ;
+                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                         owl:onProperty mc:hasQuantityKind ;
+                                                         owl:someValuesFrom qudt:QuantityKind
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty mc:hasQuantityValue ;
+                                                         owl:someValuesFrom qudt:QuantityValue
+                                                       ] .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#BiologicalProperty
+mc:BiologicalProperty rdf:type owl:Class ;
+                      rdfs:subClassOf mc:Property .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ChemicalProperty
+mc:ChemicalProperty rdf:type owl:Class ;
+                    rdfs:subClassOf mc:Property .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Component
+mc:Component rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty mc:ProvidesAgentRole ;
+                               owl:someValuesFrom prov:Role
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mc:hasIdentifier ;
+                               owl:someValuesFrom scheme:identifier
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mc:hasMaterial ;
+                               owl:someValuesFrom scheme:material
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty mc:hasName ;
+                               owl:someValuesFrom scheme:name
+                             ] .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#CompositionProperty
+mc:CompositionProperty rdf:type owl:Class ;
+                       rdfs:subClassOf mc:Property .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Consumer
+mc:Consumer rdf:type owl:Class ;
+            rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ConsumerRole
+mc:ConsumerRole rdf:type owl:Class ;
+                rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Density
+mc:Density rdf:type owl:Class ;
+           rdfs:subClassOf mc:PhysicalProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Dimension
+mc:Dimension rdf:type owl:Class ;
+             rdfs:subClassOf mc:PhysicalProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ExpectedLifeTime
+mc:ExpectedLifeTime rdf:type owl:Class ;
+                    rdfs:subClassOf mc:TemporalProperty ;
+                    owl:disjointWith mc:ServiceLife .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#GlobalTradeID
+mc:GlobalTradeID rdf:type owl:Class ;
+                 rdfs:subClassOf mc:IDType .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#HazardousMaterial
+mc:HazardousMaterial rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#IDType
+mc:IDType rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ManufacturingAgent
+mc:ManufacturingAgent rdf:type owl:Class ;
+                      rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ManufacturingRole
+mc:ManufacturingRole rdf:type owl:Class ;
+                     rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Mass
+mc:Mass rdf:type owl:Class ;
+        rdfs:subClassOf mc:PhysicalProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#PhysicalProperty
+mc:PhysicalProperty rdf:type owl:Class ;
+                    rdfs:subClassOf mc:Property .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Property
+mc:Property rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty mc:hasQuantity ;
+                              owl:someValuesFrom <http://dbpedia.org/resource/Quantity>
+                            ] .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#QualityInspector
+mc:QualityInspector rdf:type owl:Class ;
+                    rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#QualityInspectorRole
+mc:QualityInspectorRole rdf:type owl:Class ;
+                        rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#RawMaterial
+mc:RawMaterial rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#RecyclingAgent
+mc:RecyclingAgent rdf:type owl:Class ;
+                  rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#RecyclingRole
+mc:RecyclingRole rdf:type owl:Class ;
+                 rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Resistance
+mc:Resistance rdf:type owl:Class ;
+              rdfs:subClassOf mc:PhysicalProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Rigidity
+mc:Rigidity rdf:type owl:Class ;
+            rdfs:subClassOf mc:PhysicalProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ServiceLife
+mc:ServiceLife rdf:type owl:Class ;
+               rdfs:subClassOf mc:TemporalProperty .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Supplier
+mc:Supplier rdf:type owl:Class ;
+            rdfs:subClassOf prov:Agent .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#SupplierRole
+mc:SupplierRole rdf:type owl:Class ;
+                rdfs:subClassOf prov:Role .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#SustainabilityProperty
+mc:SustainabilityProperty rdf:type owl:Class ;
+                          rdfs:subClassOf mc:Property .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#TemporalExtent
+mc:TemporalExtent rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#TemporalProperty
+mc:TemporalProperty rdf:type owl:Class ;
+                    rdfs:subClassOf mc:Property .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#ThermalProperty
+mc:ThermalProperty rdf:type owl:Class ;
+                   rdfs:subClassOf mc:Property .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#UOI
+mc:UOI rdf:type owl:Class ;
+       rdfs:subClassOf mc:IDType .
+
+
+###  https://qudt.org/schema/qudt/QuantityKind
+qudt:QuantityKind rdf:type owl:Class .
+
+
+###  https://qudt.org/schema/qudt/QuantityValue
+qudt:QuantityValue rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty mc:hasunit ;
+                                     owl:someValuesFrom qudt:Unit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty mc:hasNumericValue ;
+                                     owl:allValuesFrom xsd:double
+                                   ] .
+
+
+###  https://qudt.org/schema/qudt/Unit
+qudt:Unit rdf:type owl:Class .
+
+
+###  https://schema.org/Product
+scheme:Product rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty mc:hasMaterial ;
+                                 owl:someValuesFrom scheme:material
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty scheme:hasPart ;
+                                 owl:someValuesFrom mc:Component
+                               ] .
+
+
+###  https://schema.org/identifier
+scheme:identifier rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty mc:hasIdentifierType ;
+                                    owl:someValuesFrom mc:IDType
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty mc:identifierAsText ;
+                                    owl:allValuesFrom xsd:string
+                                  ] .
+
+
+###  https://schema.org/manufacturer
+scheme:manufacturer rdf:type owl:Class .
+
+
+###  https://schema.org/material
+scheme:material rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty mc:ProvidesAgentRole ;
+                                  owl:someValuesFrom prov:Role
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty mc:hasHazardousMaterial ;
+                                  owl:someValuesFrom mc:HazardousMaterial
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty mc:hasIdentifier ;
+                                  owl:someValuesFrom scheme:identifier
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty mc:hasManufacturer ;
+                                  owl:someValuesFrom scheme:manufacturer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty mc:hasName ;
+                                  owl:someValuesFrom scheme:name
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty mc:hasProperty ;
+                                  owl:someValuesFrom mc:Property
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty mc:hasRawMaterial ;
+                                  owl:someValuesFrom mc:RawMaterial
+                                ] .
+
+
+###  https://schema.org/name
+scheme:name rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty mc:nameAsString ;
+                              owl:allValuesFrom xsd:string
+                            ] .
+
+
+###  https://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty mc:PerformedBy ;
+                                owl:someValuesFrom prov:Agent
+                              ] .
+
+
+###  https://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty mc:PerformsAgentRole ;
+                             owl:someValuesFrom prov:Role
+                           ] .
+
+
+###  https://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty prov:wasAttributedTo ;
+                              owl:someValuesFrom prov:Agent
+                            ] .
+
+
+###  https://www.w3.org/ns/prov#Role
+prov:Role rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty mc:hasTemporalExtent ;
+                            owl:someValuesFrom mc:TemporalExtent
+                          ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Bulb
+mc:Bulb rdf:type owl:NamedIndividual ,
+                 mc:Component .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#GTIN_7054130910787
+mc:GTIN_7054130910787 rdf:type owl:NamedIndividual ,
+                               scheme:identifier ;
+                      mc:identifierAsText "GTIN_7054130910787" .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Glamox_AS
+mc:Glamox_AS rdf:type owl:NamedIndividual ,
+                      scheme:manufacturer ;
+             mc:hasName mc:Glamox_AS .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#LampHolder
+mc:LampHolder rdf:type owl:NamedIndividual ,
+                       mc:Component .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Polycarbonate
+mc:Polycarbonate rdf:type owl:NamedIndividual ,
+                          scheme:material .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Steel
+mc:Steel rdf:type owl:NamedIndividual ,
+                  scheme:material .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#Wiring
+mc:Wiring rdf:type owl:NamedIndividual ,
+                   mc:Component .
+
+
+###  http://www.semanticweb.org/senp94001/MaterialandComponent#i60-1500_LED_6000_HF_840_TW_OP
+mc:i60-1500_LED_6000_HF_840_TW_OP rdf:type owl:NamedIndividual ,
+                                           scheme:Product ;
+                                  mc:hasComponent mc:Bulb ,
+                                                  mc:LampHolder ,
+                                                  mc:Wiring ;
+                                  mc:hasManufacturer mc:Glamox_AS ;
+                                  mc:hasMaterial mc:Polycarbonate ,
+                                                 mc:Steel ;
+                                  mc:identifierAsText "GTIN_7054130910787" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( mc:BiologicalProperty
+                mc:ChemicalProperty
+                mc:CompositionProperty
+                mc:PhysicalProperty
+                mc:SustainabilityProperty
+                mc:TemporalProperty
+                mc:ThermalProperty
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( mc:Density
+                mc:Dimension
+                mc:Mass
+                mc:Resistance
+                mc:Rigidity
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

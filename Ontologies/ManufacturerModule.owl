@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/senp94001/Manufacturer/"
+     xml:base="http://www.semanticweb.org/senp94001/Manufacturer/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="https://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:manuf="http://www.semanticweb.org/senp94001/Manufacturer#"
+     xmlns:scheme="https://schema.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/senp94001/Manufacturer"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#PerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#PerformedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#PerformsAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#PerformsAgentRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#ProvidesAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#ProvidesAgentRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://schema.org/identifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifierType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifierType">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#IDType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#hasManufacturer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#hasManufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://schema.org/name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#hasTemporalExtent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#hasTemporalExtent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#used -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#used">
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasAttributedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/prov#wasGeneratedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#identifierAsText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#identifierAsText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#nameAsString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#nameAsString">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#Distributor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#Distributor">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#DistributorRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#DistributorRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#EORI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#EORI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#IDType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#IDType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#IDType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifierType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#IDType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#identifierAsText"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#Importer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#Importer">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#ImportingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#ImportingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#Producer">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#ProducingRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#ProducingRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#Supplier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#Supplier">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#SupplierRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#SupplierRole">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#UOI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#UOI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#IDType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#hasManufacturer"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/identifier -->
+
+    <owl:Class rdf:about="https://schema.org/identifier">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/manufacturer -->
+
+    <owl:Class rdf:about="https://schema.org/manufacturer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#hasIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#hasName"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#identifierAsText"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#nameAsString"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <owl:Class rdf:about="https://schema.org/name">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#hasName"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#nameAsString"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Activity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3.org/ns/prov#used"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3.org/ns/prov#wasGeneratedBy"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#PerformsAgentRole"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Entity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3.org/ns/prov#wasAttributedTo"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3.org/ns/prov#wasDerivedFrom"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3.org/ns/prov#Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/prov#Role -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/prov#Role"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#EORI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#EORI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#IDType"/>
+        <manuf:hasIdentifierType rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#EORI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#EORI_Glamox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#EORI_Glamox">
+        <rdf:type rdf:resource="https://schema.org/identifier"/>
+        <manuf:identifierAsText>NO974404532</manuf:identifierAsText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#Glamox_AS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#Glamox_AS">
+        <rdf:type rdf:resource="https://schema.org/name"/>
+        <manuf:nameAsString>Glamox_AS</manuf:nameAsString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#Glamox_AS_Manufacturer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#Glamox_AS_Manufacturer">
+        <rdf:type rdf:resource="https://schema.org/manufacturer"/>
+        <manuf:hasIdentifierType rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#EORI"/>
+        <manuf:identifierAsText>EORI_Glamox</manuf:identifierAsText>
+        <manuf:nameAsString>Glamox_AS</manuf:nameAsString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/senp94001/Manufacturer#i60-1500_LED_6000_HF_840_TW_OP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/senp94001/Manufacturer#i60-1500_LED_6000_HF_840_TW_OP">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <manuf:hasManufacturer rdf:resource="http://www.semanticweb.org/senp94001/Manufacturer#Glamox_AS"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
