@@ -135,28 +135,33 @@ body {
   word-break: break-all;
 }
 
-/* Footer */
+/* Footer - Minimal GitHub Icon Only */
 .footer {
   grid-column: 1 / -1;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0.75rem 1.25rem;
-  font-size: 0.85rem;
-  background: #fff;
-  border-top: 1px solid #e0e0e0;
-  color: var(--text-color);
-  flex-wrap: wrap;
+  padding: 1rem;
+  background: none;
+  border: none;
 }
 
 .footer a {
   color: var(--text-color);
   text-decoration: none;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.footer a:hover {
+  opacity: 1;
+  color: var(--primary);
 }
 
 /* mobile adaptable just for the front page */
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
   body {
     display: block;
     padding: 1rem;
@@ -195,21 +200,9 @@ body {
     border: none;
   }
 
-  .footer div:first-child {
-    display: none; /* Hide long text on mobile */
-  }
-
   .footer a {
     font-size: 1.5rem;
     color: var(--primary);
-  }
-
-  .footer a:hover {
-    color: var(--secondary);
+    opacity: 1;
   }
 }
-
-
-
-
-
