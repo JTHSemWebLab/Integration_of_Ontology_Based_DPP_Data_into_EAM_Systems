@@ -13,6 +13,7 @@
 
 html {
   scroll-padding-top: 3rem;
+  height: 100%;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   color: var(--text-color);
   min-height: 100vh;
   overflow-y: auto;
+  height: 100%;
 }
 
 /* Sidebar */
@@ -66,7 +68,7 @@ body {
   background: var(--secondary);
 }
 
-/* Hamburger Button – hidden on large screens */
+/* Hamburger */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -85,11 +87,10 @@ body {
 }
 
 .main-header {
-  margin-top: 2rem;
+  margin: 2rem 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
 }
 
 .main-header h2 {
@@ -111,10 +112,8 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-top: 1rem;
-  max-width: 100%;
   font-size: 0.85rem;
   word-wrap: break-word;
-  overflow-wrap: break-word;
   color: var(--text-color);
 }
 
@@ -132,7 +131,7 @@ body {
 .contact-card a {
   color: var(--secondary);
   text-decoration: none;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 /* Footer */
@@ -154,20 +153,57 @@ body {
   text-decoration: none;
 }
 
-/* mobile adaptable just for the front page */
+/* Mobile GitHub Icon (Initially Hidden) */
+.mobile-footer-wrapper {
+  display: none;
+}
 
-  @media (max-width: 600px) {
+.mobile-footer-icon {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 999;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.mobile-footer-icon:hover {
+  background: #eee;
+  color: #000;
+}
+
+.mobile-footer-icon i {
+  font-size: 24px;
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 768px) {
   body {
     display: block;
     padding: 1rem;
     font-size: 1em;
-    margin: 0;
   }
 
   .sidebar,
   .hamburger,
   .footer {
-    display: none !important;
+    display: none;
+  }
+
+  .main-header {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
   }
 
   .main-header h2 {
@@ -182,54 +218,19 @@ body {
     margin: 0;
   }
 
-  .main-header {
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .content-frame {
-    height: calc(100vh - 120px); /* Adjust to fill remaining screen below the title */
+    height: calc(100vh - 120px);
     width: 100%;
     border: none;
   }
 
-  html, body {
-    height: 100%;
-  }
-  .mobile-footer-icon {
-    display: none;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-size: 24px;
-    background: #fff;
-    border-radius: 50%;
-    padding: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    z-index: 999;
-    color: #333;
-    transition: background 0.3s, color 0.3s;
-  }
-
-.mobile-footer-icon:hover {
-    background: #eee;
-    color: #000;
-  }
-
-/* Show only on small/mobile screens */
-@media screen and (max-width: 768px) {
-    .mobile-footer-icon {
+  .mobile-footer-wrapper {
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    }
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .mobile-footer-icon {
+    display: flex;
   }
 }
-
-
-
-
-
-
