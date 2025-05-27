@@ -198,6 +198,31 @@ body {
   html, body {
     height: 100%;
   }
+  .mobile-footer-icon {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 999;
+    color: #333;
+  }
+
+.mobile-footer-icon:hover {
+    background: #eee;
+    color: #000;
+  }
+
+/* Show only on small/mobile screens */
+@media (max-width: 768px) {
+    .mobile-footer-icon {
+    display: inline-block;
+    }
+  }
 }
 
 
